@@ -6,7 +6,7 @@ function App() {
   var identity = {
     name: "Dr. Mahfuj",
     profession: "Singer",
-    Title: "He is the Best singer of the world"
+    Title: "He is the Best singer of the world",
   };
   const name = "Mahfuz";
   const style = {
@@ -23,6 +23,11 @@ function App() {
           We will edit this <code>src/App.js</code> and save to reload.Our main
           work is in this folder.
         </p>
+        
+        <Person></Person>
+        <Person></Person>
+        <Person></Person>
+        
         <h2>{3+5}</h2>
         <a
           className="App-link"
@@ -32,6 +37,7 @@ function App() {
         >
           Learn React
         </a>
+        
         <h1>DHRUBOISH</h1>
   <h1 style = {style}>name: {name}</h1>
   <p>Identity: {identity.name} {","} {identity.profession} {","} {identity.Title}</p>
@@ -39,8 +45,13 @@ function App() {
   {/* /Ei vabe dile last er ta print hobe sudhu */}
         <p>My first React APP </p>
       </header>
+     
     </div>
   );
+  
 }
-
+function Person() {
+  return <h1>Name:Dhruboish</h1>
+}
+// Function App er bire function decleare korle ta diye component kora jabe.ei person function 27-29 line e.
 export default App;
