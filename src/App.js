@@ -9,6 +9,11 @@ function App() {
     Title: "He is the Best singer of the world"
   };
   const name = "Mahfuz";
+  const style = {
+    color: 'tomato',
+    backgroundColor: "yellow"
+  };
+  
   return (
     
     <div className="App">
@@ -28,9 +33,10 @@ function App() {
           Learn React
         </a>
         <h1>DHRUBOISH</h1>
-  <h1>name: {name}</h1>
+  <h1 style = {style}>name: {name}</h1>
   <p>Identity: {identity.name} {","} {identity.profession} {","} {identity.Title}</p>
-  <p>Identity: {identity.name , identity.Title , identity.profession}</p>  //Ei vabe dile last er ta print hobe sudhu
+  <p>Identity: {identity.name , identity.Title , identity.profession}</p>  
+  {/* /Ei vabe dile last er ta print hobe sudhu */}
         <p>My first React APP </p>
       </header>
     </div>
