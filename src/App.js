@@ -24,7 +24,7 @@ function  Counter() {
   return(
     <div>
           <h1>count:{count}</h1>
-          <button onClick = {handleIncrease}>Click Here To Increase One</button>
+          <button onClick = {handleIncrease}>Increase</button>
     </div>
   )
 }
