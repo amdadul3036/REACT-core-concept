@@ -1,16 +1,18 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Hello from './Component/Hello';
 
 function App() {
-  const product = [{name:"Photoshop",price: "$99.99"},
-  {name:"Illustrator",price:"$60.99"}, {name:"PDF reader",price:"$6.99"}
+
+  const nayok = ["Razzak","Bappi","Kobori","Jasim","Manna","Shakib Khan","Shuvo","DHRUBO","Moyori"];
+  const product = [
+    {name:"Photoshop",price: "$99.99"},
+    {name:"Illustrator",price:"$60.99"}, 
+    {name:"PDF reader",price:"$6.99"}
 ];
-  const goods = [{name: "Rice", price: "$10", amount:"5kg"},
-                {name: "Dab", price: "$50", amount:"10kg"},
-                {name: "Ata", price: "$19", amount:"2kg"},
-                {name: "Moyda", price: "$25", amount:"3kg"},
-                {name: "Vusi", price: "$5", amount:"1kg"}]
+
+
   var identity = {
     name: "Dr. Mahfuj",
     profession: "Singer",
@@ -30,8 +32,12 @@ function App() {
           We will edit this <code>src/App.js</code> and save to reload.Our main
           work is in this folder.
         </p>
-        
-        {/* <h2>{3 + 5}</h2>
+        <ul>
+  {
+    nayok.map(nayok => <li>{nayok}</li>)
+  }
+</ul>
+        <h2>{3 + 5}</h2>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -48,22 +54,23 @@ function App() {
           {identity.Title}
         </p>
         <p>Identity: {(identity.name, identity.Title, identity.profession)}</p>
-        {/* /Ei vabe dile last er ta print hobe sudhu */}
-        {/* <p>My first React APP </p>  */}
+        {/* Ei vabe dile last er ta print hobe sudhu */}
+        <p>My first React APP </p>
         <Person></Person>
         <Person></Person>
         <Person></Person>
-        {/* <Wrap></Wrap> */}
+        <Wrap></Wrap>
         {/* Component always start hobe Upper Case diya. */}
-        {/* <Wrap></Wrap>
-        <Wrap></Wrap> */}
-      <Product name = {product[0].name} price = {product[0].price}></Product>
+        <Wrap></Wrap>
+        <Wrap></Wrap>
+
+        <Product name = {product[0].name} price = {product[0].price}></Product>
       <Product name = {product[1].name} price = {product[1].price}></Product>
       <Product name = {product[2].name} price = {product[2].price}></Product>
-      {/* <Actor name= "Salman Khan" actress = "Dipika Padukon" follower= "14" ></Actor>
+      <Actor name= "Salman Khan" actress = "Dipika Padukon" follower= "14" ></Actor>
       <Actor name= "Amir Khan" actress = "Oishoria" follower= "12" ></Actor>
       <Actor name= "Tom Cruze" actress = "Cruzi" follower= "25" ></Actor>
-      <Actor name= "Dhruboish" actress = "Keu Nai" follower= "100" ></Actor> */}
+      <Actor name= "Dhruboish" actress = "Keu Nai" follower= "100" ></Actor>
       </header>
     </div>
   );
@@ -83,7 +90,7 @@ function Product(props) {
     height: "300px",
     width: "500px",
     margin: "20px",
-    float:"left"
+    float:"left",
   }
 
   return (
@@ -95,30 +102,23 @@ function Product(props) {
   )
 }
 // Function App er bire function decleare korle ta diye component kora jabe.ei person function 42-44 line e.
-// function Wrap() {
-//   return (
-//     <div
-//       style={{
-//         border: "10px solid red",
-//         margin: "10px",
-//         padding: "20px",
-//         borderRadius: "50%",
-//       }}
-//     >
-//       <p>Love is pain</p>
-//       <h3>
-//         <b>Still People Love to Fuck</b>
-//       </h3>
-//     </div>
-//   );
-//   //  Ekadhik tag use korle ta div ba span diya wrap kore dite hobe component er khetre
-  // function Actor(props) {
-  //   return <div style = {{border: "20px #456aba solid" , margin:"20px", padding:"50px", color:"red", fontSize:"15px", borderRadius:"20px"}}>
-  //     <h1>Actor Name: {props.name}</h1>
-  //     <h2>His Actress: {props.actress}</h2>
-  // <h3>Facebook Follower: {props.follower} million</h3>
-  //   </div>
-  // }
+function Wrap() {
+  return (
+    <div style={{border: "10px solid red",margin: "10px",padding: "20px",borderRadius: "50%",}}>
+      <p>Learning REACT</p>
+      <h3>
+        <b>REACT is a library of JavaScript</b>
+      </h3>
+    </div>
+  );}
+  //  Ekadhik tag use korle ta div ba span diya wrap kore dite hobe component er khetre
+  function Actor(props) {
+    return <div style = {{border: "20px #456aba solid" , margin:"20px", padding:"50px", color:"red", fontSize:"15px", borderRadius:"20px"}}>
+      <h1>Actor Name: {props.name}</h1>
+      <h2>His Actress: {props.actress}</h2>
+  <h3>Facebook Follower: {props.follower} million</h3>
+    </div>
+  }
  
 
-export default App;
+  export default App;
